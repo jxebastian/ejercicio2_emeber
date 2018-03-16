@@ -20,3 +20,15 @@ body {
 #icono {
   color: white;
 }
+
+.login{
+  text-align: center;
+}
+#username,#password{
+  margin: 0.5em;
+}
+
+#BLogin{
+  border-radius: 0.5em;
+  width: 60px;
+}
