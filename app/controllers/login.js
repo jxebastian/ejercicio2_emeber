@@ -28,7 +28,11 @@ export default Controller.extend({
       const people = this.get('users');
       const userV = people.findBy('username',user);
       if(userV==undefined){
-        $('#msg').text('Usuario inexistente o contraseña incorrecta');
+        $('#msg1')
+        .addClass("alert alert-danger")
+        .append('<span class="glyphicon glyphicon-exclamation-sign"></span> Usuario inexistente o contraseña incorrecta  ');
+        $('#msg').append('<hr>');
+        $('#username').text(user);
       }else if(pass==get(userV, 'password')){
         $('#msg').text('');
 
@@ -36,7 +40,10 @@ export default Controller.extend({
         this.get('car').add(user);
         this.transitionToRoute('index');
       }else{
-        $('#msg').text('Usuario inexistente o contraseña incorrecta');
+        $('#msg1')
+        .addClass("alert alert-danger")
+        .append('<span class="glyphicon glyphicon-exclamation-sign"></span> Usuario inexistente o contraseña incorrecta  ');
+        $('#msg').append('<hr>');
       }
     },
 

@@ -17,21 +17,32 @@ body {
   width: auto;
 }
 
+
 #icono {
   color: white;
 }
 
+#icono1 {
+  color: #337ab7;
+  font-size: 75px;
+}
+
 .login,.lista{
   text-align: center;
+  margin: 0 auto;
 }
+
+
 #username,#password{
-  margin: 0.5em;
+  width: 300px;
+  
 }
 
 #BLogin{
-  border-radius: 0.5em;
-  width: 60px;
+
+  width: 100px;
 }
+
 .item{
   width: auto;
   margin: 0.5em;
