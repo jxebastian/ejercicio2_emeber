@@ -15,15 +15,15 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-
+        
         <li>{{#link-to 'calculator'}}Calculator{{/link-to}}</li>
+        <li>{{#link-to 'register'}}Register{{/link-to}}</li>
         <li>{{#link-to 'people'}}List Person{{/link-to}}</li>
-
 
       </ul>
       <form class="navbar-form navbar-right">
-        {{#link-to 'register' class='btn btn-default'}}Register{{/link-to}}
-        {{#link-to 'login' class='btn btn-default'}}Login{{/link-to}}
+        {{#link-to 'login' class='btn btn-success'}}Login{{/link-to}}
+        {{#link-to 'login' class='btn btn-danger'}}Logout{{/link-to}}
       </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
