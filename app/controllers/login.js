@@ -28,19 +28,12 @@ export default Controller.extend({
       const people = this.get('users');
       const userV = people.findBy('username',user);
       if(userV==undefined){
-<<<<<<< HEAD
-=======
-        $('#password').val('');
->>>>>>> f4edbc1b59f76a68b87c4e4cd668c304cbe803ee
         $('#msg1')
         .addClass("alert alert-danger")
         .append('<span class="glyphicon glyphicon-exclamation-sign"></span> Usuario inexistente o contraseña incorrecta  ');
         $('#msg').append('<hr>');
         $('#username').text(user);
-<<<<<<< HEAD
         $('#password').val('');
-=======
->>>>>>> f4edbc1b59f76a68b87c4e4cd668c304cbe803ee
       }else if(pass==get(userV, 'password')){
         $('#msg').text('');
 
@@ -48,20 +41,11 @@ export default Controller.extend({
         this.get('car').add(user);
         this.transitionToRoute('index');
       }else{
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f4edbc1b59f76a68b87c4e4cd668c304cbe803ee
         $('#msg1')
         .addClass("alert alert-danger")
         .append('<span class="glyphicon glyphicon-exclamation-sign"></span> Usuario inexistente o contraseña incorrecta  ');
         $('#msg').append('<hr>');
-<<<<<<< HEAD
         $('#password').val('');
-=======
-
->>>>>>> f4edbc1b59f76a68b87c4e4cd668c304cbe803ee
       }
     },
 
