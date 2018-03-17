@@ -2,20 +2,6 @@
   <label id="msg"></label> <br>
   <input id="username" type="text" placeholder="Username"/> <br>
   <input id="password" type="password" placeholder="Password"/> <br>
-  {{#if car.items}}
-  {{else}}
   <button id="BLogin" type="button"  {{action "login"}} >Login</button>
-  {{/if}}
 </div>
-
-
-<ul>
-  {{#each car.items as |item|}}
-    <li>
-      {{item}}
-      <!-- <button {{action "remove" item}}>Remove</button> -->
-    </li>
-  {{/each}}
-</ul>
-
 {{outlet}}

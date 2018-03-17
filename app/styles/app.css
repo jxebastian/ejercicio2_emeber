@@ -21,7 +21,7 @@ body {
   color: white;
 }
 
-.login{
+.login,.lista{
   text-align: center;
 }
 #username,#password{
@@ -31,4 +31,18 @@ body {
 #BLogin{
   border-radius: 0.5em;
   width: 60px;
+}
+.item{
+  width: auto;
+  margin: 0.5em;
+  padding: 0.4em;
+  background-color: rgba(187,187,187,0.4);
+  border-radius: 0.5em;
+  text-decoration: none;
+}
+.item a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
 }
