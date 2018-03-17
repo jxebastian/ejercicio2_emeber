@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
-import {computed, set, get} from '@ember/object';
-import { inject as service} from '@ember/service';
+import { computed, set, get } from '@ember/object';
+import { inject as service } from '@ember/service';
 
 export default Controller.extend({
   //car: service('login'),
@@ -19,6 +19,9 @@ export default Controller.extend({
           password: '123',
         },
       ],
+
+  car: service('login'),
+
   actions:{
     login(){
       const user = $('#username').val();
@@ -30,15 +33,22 @@ export default Controller.extend({
       }else if(pass==get(userV, 'password')){
         console.log('Inicio bien');
         $('#msg').text('');
+
+        //la solucion esta acá, luego de loguearse guardar en el servicio solo el username
+        // if (car.items.size() === 0) {
+        this.get('car').add(user);
+        // }
+        //
       }else{
         $('#msg').text('Usuario inexistente o contraseña incorrecta');
       }
     },
+
     remove(item) {
       this.get('car').remove(item);
     },
-    add(item) {
+    add(item){
       this.get('car').add(item);
     },
-  }
+  },
 });

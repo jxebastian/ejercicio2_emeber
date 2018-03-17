@@ -12,11 +12,11 @@ export default Service.extend({
     this.get('items').pushObject(item);
   },
 
-   remove(item) {
-     this.get('items').removeObject(item);
-   },
+  remove(item) {
+    this.get('items').removeObject(item);
+  },
 
-   empty() {
-     this.get('items').clear();
-   }
+  empty() {
+    this.get('items').clear();
+  }
 });
