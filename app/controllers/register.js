@@ -12,16 +12,25 @@ export default Controller.extend({
         $('.msg2')
         .addClass("alert alert-danger")
         .append('<span class="glyphicon glyphicon-exclamation-sign"></span> Llene todos los campos');
-        console.log("mal");
       }else{
-        const json = {name, sex, salary};
-        this.get('people').add(json);
-        $('#name').val('');
-        $('#sex').val('');
-        $('#salary').val('');
-        $('.msg2')
-        .addClass("alert alert-success")
-        .append('<span class="glyphicon glyphicon-ok"></span> Register success');
+        if(!(/^[A-Za-z]+$/.test(name))){
+          $('.msg2')
+          .addClass("alert alert-danger")
+          .append('<span class="glyphicon glyphicon-exclamation-sign"></span> Solo letras');
+        }else if(!(/^\d+$/.test(salary))){
+          $('.msg2')
+          .addClass("alert alert-danger")
+          .append('<span class="glyphicon glyphicon-exclamation-sign"></span> Numeros enteros');
+        }else{
+          const json = {name, sex, salary};
+          this.get('people').add(json);
+          $('#name').val('');
+          $('#sex').val('');
+          $('#salary').val('');
+          $('.msg2')
+          .addClass("alert alert-success")
+          .append('<span class="glyphicon glyphicon-ok"></span> Register success');
+        }
       }
     },
   },
