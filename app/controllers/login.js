@@ -28,6 +28,8 @@ export default Controller.extend({
       const people = this.get('users');
       const userV = people.findBy('username',user);
       if(userV==undefined){
+        $('#msg1').empty();
+        $('#msg').empty();
         $('#msg1')
         .addClass("alert alert-danger")
         .append('<span class="glyphicon glyphicon-exclamation-sign"></span> Usuario inexistente o contraseña incorrecta  ');
