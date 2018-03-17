@@ -29,14 +29,17 @@ export default Controller.extend({
       const userV = people.findBy('username',user);
       if(userV==undefined){
         $('#msg').text('Usuario inexistente o contraseña incorrecta');
+        $('#password').val('');
       }else if(pass==get(userV, 'password')){
         $('#msg').text('');
 
         //la solucion esta acá, luego de loguearse guardar en el servicio solo el username
         this.get('car').add(user);
+        console.log(this.get('car').size());
         this.transitionToRoute('index');
       }else{
         $('#msg').text('Usuario inexistente o contraseña incorrecta');
+        $('#password').val('');
       }
     },
 

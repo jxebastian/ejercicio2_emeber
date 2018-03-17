@@ -3,7 +3,8 @@ import { inject as service } from '@ember/service';
 
 export default Route.extend({
   model(){
-    console.log(this.get('car'));
+    users: service('login');
+    console.log(this.get('users'));
     if(this.get('car')){
       this.transitionTo('index');
     }
