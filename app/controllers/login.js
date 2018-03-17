@@ -1,22 +1,44 @@
 import Controller from '@ember/controller';
 import {computed, set, get} from '@ember/object';
+import { inject as service} from '@ember/service';
 
 export default Controller.extend({
-  username: computed('user', function(){
-    return $('#username').val();
-  }),
+  //car: service('login'),
 
-  password: computed('pass', function(){
-    return $('#password').val();
-  }),
-
+  users : [
+        {
+          username:'cristian',
+          password: '1234',
+        },
+        {
+          username:'lucas',
+          password: '12345',
+        },
+        {
+          username:'johan',
+          password: '123',
+        },
+      ],
   actions:{
     login(){
-      const user = this.get('username');
-      const pass = this.get('password');
-      console.log(pass);
-      const people = this.get('people.model.people');
-      console.log(people);
-    }
+      const user = $('#username').val();
+      const pass = $('#password').val();
+      const people = this.get('users');
+      const userV = people.findBy('username',user);
+      if(userV==undefined){
+        $('#msg').text('Usuario inexistente o contraseña incorrecta');
+      }else if(pass==get(userV, 'password')){
+        console.log('Inicio bien');
+        $('#msg').text('');
+      }else{
+        $('#msg').text('Usuario inexistente o contraseña incorrecta');
+      }
+    },
+    remove(item) {
+      this.get('car').remove(item);
+    },
+    add(item) {
+      this.get('car').add(item);
+    },
   }
 });
