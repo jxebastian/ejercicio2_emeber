@@ -28,22 +28,33 @@ export default Controller.extend({
       const people = this.get('users');
       const userV = people.findBy('username',user);
       if(userV==undefined){
+<<<<<<< HEAD
+        $('#msg').text('Usuario inexistente o contraseña incorrecta');
+        $('#password').val('');
+=======
         $('#msg1')
         .addClass("alert alert-danger")
         .append('<span class="glyphicon glyphicon-exclamation-sign"></span> Usuario inexistente o contraseña incorrecta  ');
         $('#msg').append('<hr>');
         $('#username').text(user);
+>>>>>>> ad648cddbc5116d4d0e935496953fa5264acdc93
       }else if(pass==get(userV, 'password')){
         $('#msg').text('');
 
         //la solucion esta acá, luego de loguearse guardar en el servicio solo el username
         this.get('car').add(user);
+        console.log(this.get('car').size());
         this.transitionToRoute('index');
       }else{
+<<<<<<< HEAD
+        $('#msg').text('Usuario inexistente o contraseña incorrecta');
+        $('#password').val('');
+=======
         $('#msg1')
         .addClass("alert alert-danger")
         .append('<span class="glyphicon glyphicon-exclamation-sign"></span> Usuario inexistente o contraseña incorrecta  ');
         $('#msg').append('<hr>');
+>>>>>>> ad648cddbc5116d4d0e935496953fa5264acdc93
       }
     },
 

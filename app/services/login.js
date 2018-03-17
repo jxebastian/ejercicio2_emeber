@@ -18,5 +18,13 @@ export default Service.extend({
 
   empty() {
     this.get('items').clear();
+  },
+
+  size(){
+    var c = 0;
+    this.get('items').forEach ((item) =>{
+      c++;
+    });
+    return c;
   }
 });
