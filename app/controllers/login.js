@@ -35,7 +35,6 @@ export default Controller.extend({
         //la solucion esta acá, luego de loguearse guardar en el servicio solo el username
         this.get('car').add(user);
         this.transitionToRoute('index');
-        console.log('Inicio bien');
       }else{
         $('#msg').text('Usuario inexistente o contraseña incorrecta');
       }
