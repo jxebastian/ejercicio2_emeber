@@ -5,8 +5,8 @@ export default Route.extend({
   car: service('login'),
   model(){
     // console.log(this.get('car').items[0]);
-    if(this.get('car').size() > 0){
-      this.transitionTo('index');
+    if(this.get('car').items.length > 0){
+       this.transitionTo('index');
     }
   }
 });
