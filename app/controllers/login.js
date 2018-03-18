@@ -17,9 +17,17 @@ export default Controller.extend({
           username:'johan',
           password: '123',
         },
+        {
+          username:'luis',
+          password: 'lu56',
+        },
+        {
+          username:'alejandro',
+          password: 'alejo46',
+        },
       ],
 
-  car: service('login'),
+  sesion: service('login'),
 
   actions:{
     login(){
@@ -42,7 +50,7 @@ export default Controller.extend({
       }else if(pass==get(userV, 'password')){
 
         //la solucion esta acá, luego de loguearse guardar en el servicio solo el username
-        this.get('car').add(user);
+        this.get('sesion').add(user);
         this.transitionToRoute('index');
       }else{
         $('#msg1')
@@ -51,13 +59,6 @@ export default Controller.extend({
         $('#msg').append('<hr>');
         $('#password').val('');
       }
-    },
-
-    remove(item) {
-      this.get('car').remove(item);
-    },
-    add(item){
-      this.get('car').add(item);
     },
   },
 });
