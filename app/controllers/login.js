@@ -23,6 +23,9 @@ export default Controller.extend({
 
   actions:{
     login(){
+      $('#msg1').empty()
+      .removeClass("alert alert-success alert-danger");
+      $('#msg').empty();
       const user = $('#username').val();
       const pass = $('#password').val();
       const people = this.get('users');
@@ -37,7 +40,6 @@ export default Controller.extend({
         $('#username').text(user);
         $('#password').val('');
       }else if(pass==get(userV, 'password')){
-        $('#msg').text('');
 
         //la solucion esta acá, luego de loguearse guardar en el servicio solo el username
         this.get('car').add(user);

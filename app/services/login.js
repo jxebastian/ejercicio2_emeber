@@ -5,11 +5,17 @@ export default Service.extend({
 
   init() {
     this._super(...arguments);
-    this.set('items', []);
+    if(JSON.parse(localStorage.getItem("user")) == null){
+      this.set('items', []);
+    }else{
+      this.set('items', JSON.parse(localStorage.getItem("user")));
+    }
+
   },
 
   add(item) {
     this.get('items').pushObject(item);
+    localStorage.setItem("user", JSON.stringify(this.get('items')));
   },
 
   remove(item) {
