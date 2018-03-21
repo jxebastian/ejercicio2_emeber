@@ -1,0 +1,73 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+
+#icono {
+  color: white;
+}
+
+#icono1 {
+  color: #449d44;
+  font-size: 75px;
+}
+
+.text-center,.lista{
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+#username,#password,#name, #sex, #salary,#num1, #num2, #Total{
+  width: 300px;
+
+}
+
+.input-group-addon{
+
+  width: 50px;
+}
+
+.input-group{
+  padding-left: 400px;
+}
+#BLogin{
+
+  width: 100px;
+}
+
+.item{
+  width: auto;
+  margin: 0.5em;
+  padding: 0.4em;
+  background-color: rgba(187,187,187,0.4);
+  border-radius: 0.5em;
+  text-decoration: none;
+}
+.item a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+
+
+#th1{
+  padding-left: 500px;
+  padding-right: 50px;
+}

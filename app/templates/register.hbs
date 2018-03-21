@@ -1,0 +1,53 @@
+<!-- <div class="register">
+  <strong> Name:   </strong>
+  <input id="name" type="text"/> <br>
+  <strong> Sex:    </strong>
+  <input id="sex" type="text"/> <br>
+  <strong> Salary: </strong>
+  <input id="salary" type="number"/> <br>
+
+</div> -->
+<div class="text-center">
+  <div id="msg1">
+
+  </div>
+  <div id="msg">
+
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">N</span>
+    <input id="name" type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+  </div>
+  <br>
+
+  <div class="input-group">
+    <!--<input id="sex" type="text" class="form-control" placeholder="Sex" aria-describedby="basic-addon2"> -->
+    <span class="input-group-addon" id="basic-addon2">Sex</span>
+    <select class="form-control" id="sex" >
+      <option value=""></option>
+      <option value="Female">Female</option>
+      <option value="Male">Male</option>
+    </select>
+  </div>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon">$</span>
+    <input id="salary" type="number" class="form-control" placeholder="Salary" aria-label="Amount (to the nearest dollar)">
+    <!--<span class="input-group-addon">.00</span> -->
+  </div>
+  <br>
+
+  <button id="BReg" type="button" class="btn btn-success text-center" {{action "register"}} >Register</button>
+
+</div>
+
+<!-- <ul>
+  {{#each people.items as |item|}}
+    <li>
+      {{item.name}}
+       <button {{action "remove" item}}>Remove</button> -->
+    <!-- </li>
+  {{/each}}
+</ul> -->
+
+{{outlet}}

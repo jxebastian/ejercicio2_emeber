@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Persons Registered</div>
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Salary</th>
+      <th>Option</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each people.items as |item|}}
+        <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.sex}}</td>
+        <td>{{item.salary}}</td>
+        <td><button class="btn btn-danger" {{action "remove" item}}>Remove</button></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+{{outlet}}
