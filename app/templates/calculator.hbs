@@ -1,1 +1,41 @@
+<div class="text-center">
+  <div id = "msg99">
+
+  </div>
+  <div id = "msg100">
+
+  </div>
+  <div >
+    <h2><strong>Please Enter 2 numbers for calculate (SUM OR SUB)</strong></h2>
+  </div>
+  <br>
+  <div class ="input-group">
+    <span class="input-group-addon" id="basic-addon1">Numero 1: </span>
+    <input id="num1" type="number" class="form-control" placeholder="Enter number 1" aria-describedby="basic-addon1" max = "1000" min = "-1000">
+  </div>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon2">Numero 2: </span>
+    <input id="num2" type="number" class="form-control" placeholder="Enter number 2" aria-describedby="basic-addon1" max = "1000" min = "-1000">
+  </div>
+
+  <br>
+  <div class="">
+    <table>
+      <th id= "th1">
+        <button id = "sum" type="button"class="btn btn-success text-center"{{action "sum" }} >SUMAR</button>
+      </th>
+
+      <th>
+        <button id = "sub" type="button"class="btn btn-success text-center"{{action "sub" }} >RESTAR</button>
+      </th>
+    </table>
+  </div>
+  <br><br>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">Total: </span>
+    <input id="Total" type="text" class="form-control" placeholder="Total" aria-describedby="basic-addon1" readonly>
+  </div>
+</div>
+
 {{outlet}}
